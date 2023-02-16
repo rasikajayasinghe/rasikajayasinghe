@@ -31,28 +31,32 @@ const Header = () => {
             <Link
               title="Facebook"
               className="cursor-pointer text-dark_primary hover:text-blue-400 duration-300"
-              href="#"
+              href="https://www.facebook.com/rasikajayasingha"
+              target="_blank"
             >
               <AiFillFacebook size={28} />
             </Link>
             <Link
               title="Instagram"
               className="cursor-pointer text-dark_primary hover:text-blue-400 duration-300"
-              href="#"
+              href="https://www.instagram.com/rasikajayasinghe87/"
+              target="_blank"
             >
               <AiFillInstagram size={28} />
             </Link>
             <Link
               title="Linkedin"
               className="cursor-pointer text-dark_primary hover:text-blue-400 duration-300"
-              href="#"
+              href="https://www.linkedin.com/in/rasika-jayasinghe/"
+              target="_blank"
             >
               <AiFillLinkedin size={28} />
             </Link>
             <Link
               title="Youtube"
               className="cursor-pointer text-dark_primary hover:text-blue-400 duration-300"
-              href="#"
+              href="https://www.youtube.com/@codehublk"
+              target="_blank"
             >
               <AiFillYoutube size={28} />
             </Link>
