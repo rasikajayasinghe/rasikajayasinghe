@@ -3,7 +3,6 @@ import { getBlogPosts, getBlogPost } from "@/utils/sanity";
 import getFormattedDate from "date-formatter-ts";
 import { urlFor } from "@/lib/sanity-client";
 import PortableText from "react-portable-text";
-import BlogText from "@/components/BlogText";
 
 //reset cache
 export const revalidate = 60;
