@@ -3,6 +3,8 @@ import { getBlogPosts, getBlogPost } from "@/utils/sanity";
 import getFormattedDate from "date-formatter-ts";
 import { urlFor } from "@/lib/sanity-client";
 import PortableText from "react-portable-text";
+import BlogComment from "@/components/blog/BlogComment";
+import CommentsView from "@/components/blog/CommentCard";
 
 //reset cache
 export const revalidate = 60;
@@ -78,6 +80,19 @@ const BlogPostView = async ({ params }: BlogPostViewProps) => {
             }}
           />
         </div>
+        {/* comment view */}
+        {post.comments.length > 0 && (
+          <div className="flex flex-col p-10 my-10 mx-auto space-y-2">
+            <h3 className="text-2xl font-bold">Comments</h3>
+            <hr />
+            {post.comments.map(({ _id, name, comment }) => (
+              <CommentsView key={_id} name={name} comment={comment} />
+            ))}
+          </div>
+        )}
+
+        {/* comment form */}
+        <BlogComment postId={post._id} />
       </div>
     </section>
   );
