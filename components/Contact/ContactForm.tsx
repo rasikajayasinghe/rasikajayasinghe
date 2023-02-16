@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import ThankYouImg from "@/assets/images/blog/thank-you.png";
 
 interface IFormInput {
   name: string;
@@ -12,6 +14,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IFormInput>();
 
@@ -23,6 +26,7 @@ const ContactForm = () => {
       .then(() => {
         console.log(data);
         setSubmitted(true);
+        reset();
       })
       .catch((err) => {
         console.log(err);
@@ -48,6 +52,21 @@ const ContactForm = () => {
               - The Message Field is required
             </span>
           )}
+        </div>
+      )}
+      {submitted && (
+        <div className="flex py-4 px-2 items-center  my-10 bg-primaryLinear text-white  mx-auto rounded-sm">
+          <Image
+            src={ThankYouImg}
+            alt="Thank you for comments"
+            width={96}
+            height={96}
+          />
+          <div>
+            <h5 className=" text-2xl font-bold mb-2">
+              Thank you for filling out your information!
+            </h5>
+          </div>
         </div>
       )}
 
