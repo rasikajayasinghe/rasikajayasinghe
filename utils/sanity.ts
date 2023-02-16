@@ -33,7 +33,7 @@ export const getBlogPost = async (slug: string) => {
         },
         'comments': *[
             _type == "comment" &&
-            post._ref == ^._id &&
+            blog._ref == ^._id &&
             approved == true
         ],
         description,
