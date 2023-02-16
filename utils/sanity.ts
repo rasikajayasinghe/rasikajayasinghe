@@ -24,13 +24,18 @@ export const getBlogPosts = async () => {
 export const getBlogPost = async (slug: string) => {
   const result = await sanityClient.fetch<BlogPost>(
     groq`*[_type == "blog" && slug.current == $slug][0]{
-        _id,
+         _id,
         _createdAt,
         title,
         author-> {
-          name,
-          image,
+        name,
+        image,
         },
+        'comments': *[
+            _type == "comment" &&
+            post._ref == ^._id &&
+            approved == true
+        ],
         description,
         mainImage,
         slug,
