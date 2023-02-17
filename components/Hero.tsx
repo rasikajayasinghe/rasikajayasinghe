@@ -8,15 +8,15 @@ const Hero = () => {
     <section id="home" className="overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center ">
         <div className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10">
-          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+          <h1 className="rotate-90 absolute top-[25.5%] right-[-46%] lg:top-[30%] xl:top-[40%] text-[#EAF2FA]">
             {hero.firstName}{" "}
             <span className="text-dark_primary">{hero.LastName}</span>
           </h1>
         </div>
 
         {/* first col */}
-        <div className="pb-16 px-6 pt- ">
-          <h2>{hero.title}</h2>
+        <div className="pb-16 px-6 pt-5 ">
+          <h2 className="md:text-[2.5rem] lg:text-[3rem]">{hero.title}</h2>
           <br />
           <div className="flex justify-end">
             <Link href="/contact" className="btn">
