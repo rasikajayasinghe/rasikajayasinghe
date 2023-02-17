@@ -16,16 +16,13 @@ export default function ContactPage() {
         <br />
         <div className="flex gap-10 md:flex-row flex-col">
           <ContactForm />
-          <div className="flex-1 flex flex-col gap-5">
-            {Contact.social_media.map((content, i) => (
-              <div
-                key={i}
-                data-aos="fade-down"
-                data-aos-delay={i * 430}
-                className="flex items-center gap-2"
-              >
-                <h4 className="text-white">{createElement(content.icon)}</h4>
-                <a className="font-Poppins" href={content.link} rel="noopener">
+          <div className="flex-1 flex flex-col gap-5  py-14">
+            {Contact.social_media.map((content) => (
+              <div key={content.id} className="flex items-center gap-2">
+                <h4 className="text-lg mr-2 text-white">
+                  {createElement(content.icon)}
+                </h4>
+                <a href={content.link} rel="noopener">
                   {content.text}
                 </a>
               </div>
