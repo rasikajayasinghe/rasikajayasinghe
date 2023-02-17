@@ -73,7 +73,7 @@ const Header = () => {
           <Link
             key={item.id}
             href={item.link}
-            className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+            className={`text-xl p-2.5 rounded-full sm:cursor-pointer  ${
               pathname === item.link && " bg-dark_primary text-white"
             }`}
           >
