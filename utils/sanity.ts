@@ -4,8 +4,7 @@ import { groq } from "next-sanity";
 
 //get blog post list
 export const getBlogPosts = async () => {
-  return await sanityClient.fetch<BlogPost[]>(
-    groq`*[_type == "blog"]|order(date desc){
+  const query = groq`*[_type == "blog"]|order(date desc){
       _id,
       _createdAt,
         title,
@@ -16,14 +15,13 @@ export const getBlogPosts = async () => {
         description,
         mainImage,
         slug,
-    }`
-  );
+    }`;
+  return await sanityClient.fetch<BlogPost[]>(query);
 };
 
 //get one post details
 export const getBlogPost = async (slug: string) => {
-  const result = await sanityClient.fetch<BlogPost>(
-    groq`*[_type == "blog" && slug.current == $slug][0]{
+  const query = groq`*[_type == "blog" && slug.current == $slug][0]{
          _id,
         _createdAt,
         title,
@@ -40,11 +38,7 @@ export const getBlogPost = async (slug: string) => {
         mainImage,
         slug,
         body,
-        }`,
-    {
-      slug,
-    }
-  );
-
+        }`;
+  const result = await sanityClient.fetch<BlogPost>(query, { slug });
   return result;
 };
