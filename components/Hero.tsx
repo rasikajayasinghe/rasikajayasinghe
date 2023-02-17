@@ -16,7 +16,12 @@ const Hero = () => {
 
         {/* first col */}
         <div className="pb-16 px-6 pt-5 ">
-          <h2 className="md:text-[2.5rem] lg:text-[3rem]">{hero.title}</h2>
+          <h2 className="text-3xl md:text-[1.5rem] lg:text-[2rem] xl:text-[3rem] xl:mb-3">
+            {hero.maintitle}
+          </h2>
+          <h2 className="text-4xl md:text-[2.5rem] lg:text-[2.5rem] xl:text-[4rem] xl:mb-3">
+            {hero.subTitle}
+          </h2>
           <br />
           <div className="flex justify-end">
             <Link href="/contact" className="btn">
