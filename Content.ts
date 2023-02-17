@@ -60,7 +60,8 @@ export const content = {
     },
   ],
   hero: {
-    title: "Front-end Developer",
+    maintitle: "Senior",
+    subTitle: "Front-end Developer",
     firstName: "RASIKA",
     LastName: "JAYASINGHE",
     btnText: "Hire Me",
