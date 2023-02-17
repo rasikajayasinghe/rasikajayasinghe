@@ -82,7 +82,7 @@ const BlogPostView = async ({ params }: BlogPostViewProps) => {
         </div>
         {/* comment view */}
         {post.comments.length > 0 && (
-          <div className="flex flex-col p-10 my-10 mx-auto space-y-2">
+          <div className="flex flex-col my-10 mx-auto space-y-2">
             <h3 className="text-2xl font-bold">Comments</h3>
             <hr />
             {post.comments.map(({ _id, name, comment }) => (
