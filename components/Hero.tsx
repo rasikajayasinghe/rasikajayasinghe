@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
 
         {/* sec col */}
-        <div className="md:h-[37rem] h-96">
+        <div className="w-64 md:w-96 lg:w-[37rem]">
           <Image
             priority
             src={hero.image.src}
