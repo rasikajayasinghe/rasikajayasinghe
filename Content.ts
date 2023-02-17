@@ -20,7 +20,7 @@ import project2 from "./assets/images/projects/img2.png";
 import project3 from "./assets/images/projects/img3.png";
 
 // import icons from react-icons
-import { GrMail } from "react-icons/gr";
+import { GrMail, GrMapLocation } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { FaHome, FaRegUser } from "react-icons/fa";
 import { RiServiceLine, RiProjectorLine, RiArticleFill } from "react-icons/ri";
@@ -184,11 +184,13 @@ export const content = {
     subtitle: "GET IN TOUCH",
     social_media: [
       {
+        id: "1",
         text: "rasikajayasinghe@gmail.com",
         icon: GrMail,
         link: "mailto:rasikajayasinghe@gmail.com",
       },
       {
+        id: "2",
         text: "+94 70 336 8058",
         icon: MdCall,
         link: "https://wa.me/0703368058",
